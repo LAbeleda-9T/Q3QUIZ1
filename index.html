@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators Demo</title>
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    
+
+    <div class="container">
+        <!-- Title: JavaScript Operation -->
+        <h1><b>JAVASCRIPT OPERATION</h1> </b><hr>
+
+        <!-- GIVEN: Danger Alert -->
+        <div class="alert alert-info">
+           <strong>GIVEN: </strong> If A = 30.27 and B = 6.18, compute for the following...
+        </div>
+
+        <!-- Cards Wrapper to Arrange Horizontally -->
+        <div class="cards-wrapper">
+            <!-- Arithmetic Card -->
+            <div class="card" id="arithmetic-card">
+                <h4>Arithmetic Operations</h4> <hr>
+                <p><strong>Exponent (A^B):</strong> <span id="exp-result">Not Calculated</span></p>
+                <p><strong>Mod (A % B):</strong> <span id="mod-result">Not Calculated</span></p>
+                <button onclick=" var A = 30.27, B = 6.18; document.getElementById('exp-result').textContent = (A ** B).toFixed(2);
+                    document.getElementById('mod-result').textContent = (A % B).toFixed(2);
+                ">Answer</button>
+            </div>
+
+            <!-- Comparison Card -->
+            <div class="card" id="comparison-card">
+                <h4>Comparison Operations</h4> <hr>
+                <p><strong>Is A greater than B?</strong> <span id="comparison1">Not Calculated</span></p>
+                <p><strong>Is A equal to B?</strong> <span id="comparison2">Not Calculated</span></p>
+                <button onclick="
+                    var A = 30.27, B = 6.18;
+                    document.getElementById('comparison1').textContent = (A > B) ? 'True' : 'False';
+                    document.getElementById('comparison2').textContent = (A === B) ? 'True' : 'False';
+                ">Answer</button>
+            </div>
+
+            <!-- Logical Card -->
+            <div class="card" id="logical-card">
+                <h4>Logical Operations</h4> <hr>
+                <p><strong>(A <= B) && (A >= B):</strong> <span id="logical1">Not Calculated</span></p>
+                <p><strong>(A != B) || (A == B):</strong> <span id="logical2">Not Calculated</span></p>
+                <button onclick="
+                    var A = 30.27, B = 6.18;
+                    document.getElementById('logical1').textContent = ((A <= B) && (A >= B)) ? 'True' : 'False';
+                    document.getElementById('logical2').textContent = ((A != B) || (A == B)) ? 'True' : 'False';
+                ">Answer</button>
+            </div>
+        </div>
+
+        <!-- Refresh Button -->
+        <button class="refresh-btn" onclick="window.location.reload();">Refresh</button>
+    </div>
+
+</body>
+</html>
